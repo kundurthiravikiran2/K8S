@@ -1,10 +1,242 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>GitOps Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitOps Deployment Successful</title>
+
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+    }
+
+    .success-icon {
+        width: 90px;
+        height: 90px;
+        background: #22c55e;
+        border-radius: 50%;
+        margin: 0 auto 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        box-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        color: #cbd5e1;
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .status {
+        display: inline-block;
+        background: #14532d;
+        color: #86efac;
+        padding: 10px 22px;
+        border-radius: 25px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 10px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+        padding: 22px;
+        text-align: left;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .card p {
+        color: #cbd5e1;
+        font-size: 14px;
+    }
+
+    .check {
+        color: #4ade80;
+        margin-right: 8px;
+    }
+
+    .footer {
+        margin-top: 35px;
+        color: #94a3b8;
+        font-size: 14px;
+    }
+
+    .pipeline {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .step {
+        background: #1e293b;
+        border: 1px solid #334155;
+        padding: 12px 18px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .arrow {
+        color: #22c55e;
+        font-size: 20px;
+    }
+
+    @media (max-width: 650px) {
+        .container {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .pipeline {
+            flex-direction: column;
+        }
+
+        .arrow {
+            transform: rotate(90deg);
+        }
+    }
+</style>
+```
+
 </head>
+
 <body>
+
+```
+<div class="container">
+
+    <div class="success-icon">
+        ✓
+    </div>
+
     <h1>GitOps Deployment Successful!</h1>
-    <p>Deployed using Docker, Kubernetes and ArgoCD.</p>
+
+    <p class="subtitle">
+        Application successfully deployed and running on Kubernetes.
+    </p>
+
+    <div class="status">
+        ● DEPLOYMENT STATUS: SUCCESS
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3><span class="check">✓</span> GitOps</h3>
+            <p>
+                Application configuration successfully synchronized
+                through the GitOps workflow.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3><span class="check">✓</span> Argo CD</h3>
+            <p>
+                Argo CD successfully synchronized the application
+                with the Kubernetes cluster.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3><span class="check">✓</span> Docker</h3>
+            <p>
+                Docker container image successfully built and deployed.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3><span class="check">✓</span> Kubernetes</h3>
+            <p>
+                Application pods are successfully running inside
+                the Kubernetes cluster.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="pipeline">
+
+        <div class="step">Git Repository</div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">Docker Image</div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">Argo CD</div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">Kubernetes</div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">Application</div>
+
+    </div>
+
+    <div class="footer">
+        🚀 Powered by Docker • Kubernetes • Argo CD • GitOps
+    </div>
+
+</div>
+```
+
 </body>
 </html>
+
